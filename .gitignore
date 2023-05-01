@@ -109,3 +109,6 @@ yarn-error.log
 # Docker
 docker-compose.yml
 Dockerfile
+
+# Exceptions
+!alias.sh
