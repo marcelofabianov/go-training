@@ -1,34 +1,17 @@
 package main
 
-import (
-	"encoding/json"
-	"net/http"
-)
-
-type Response struct {
-	Data   []interface{} `json:"data"`
-	Status Status        `json:"status"`
-}
-
-type Status struct {
-	Code    int    `json:"code"`
-	Message string `json:"message"`
-	Success bool   `json:"success"`
-}
-
-var response = Response{
-	Data: []interface{}{},
-	Status: Status{
-		Code:    200,
-		Message: "OK",
-		Success: true,
-	},
-}
+import "fmt"
 
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		json.NewEncoder(w).Encode(response)
-	})
+	print("\nHello ", "World ", 2022, " Go!")
+	println("Hello", "World ", 2022, " Go!")
 
-	http.ListenAndServe(":8080", nil)
+	///////////////////lib fmt////////////////////////
+	fmt.Println("Hello", "World ", 2022, " Go!")
+
+	s := fmt.Sprintf("%s", "string-here")
+	fmt.Printf("%s%s", s, "\n")
+
+	f := fmt.Sprintf("%0.2f", 34.56756)
+	fmt.Println("float:", f)
 }
