@@ -1,5 +1,12 @@
 package main
 
+import "fmt"
+
+// variavel escopo de pacote
+var name  string
+
 func main() {
-	println("Hello World")
+	name = "Marcelo fabiano"
+
+	fmt.Println("Hello,", name)
 }
