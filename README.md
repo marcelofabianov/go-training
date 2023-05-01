@@ -7,18 +7,10 @@ Estudando GoLang...
 Para executar os codigos tenha docker em seu computador e execute o comando abaixo:
 
 ```bash
-docker-compose up -d
+docker-compose up -d && source docker/local/alias.sh
 ```
 
-Alias para facilitar
-
-```bash
-source alias.sh
-```
-
-### Testando
-
-Para testar os codigos execute o comando abaixo:
+### Executando
 
 ```bash
 go run main.go
