@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  app:
+    container_name: app
+    restart: always
+    build:
+      context: .
+      dockerfile: ./docker/local/go/Dockerfile
+    image: marcelofabianov/go
+    working_dir: /app
+    volumes:
+      - .:/app
+      - ./docker/local/zsh/.zshrc:/home/dev/.zshrc
+      - ./docker/local/zsh/.zsh_history:/home/dev/.zsh_history
+    networks:
+      - go_network
+    ports:
+      - '8080:8080'
+
+networks:
+  go_network:
+    driver: bridge

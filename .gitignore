@@ -106,9 +106,5 @@ yarn-error.log
 *.pfx
 *.pem
 
-# Docker
-docker-compose.yml
-Dockerfile
-
 # Exceptions
 !alias.sh
